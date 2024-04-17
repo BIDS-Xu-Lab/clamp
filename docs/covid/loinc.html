@@ -1,0 +1,514 @@
+<base href="../" target="_blank">
+<!DOCTYPE html>
+<html lang="en">
+    <head>     
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>COVID-19 TestNorm | CLAMP | Natural Language Processing (NLP) Software</title>
+        <meta name="description" content="CLAMP, Clinical Natural Language Processing Software For Medical and Healthcare Annotation. Text mining and machine learning for clinical notes. NLP system with advanced machine learning tools. COVID-19 TestNorm. | ">
+        <meta name="keywords" content="clinical natural language processing software,
+              clinical natural language processing tool,
+              clinical natural language processing,
+              clinical nlp tool,
+              clinical nlp software,
+              clinical nlp,
+              clinical annotation,
+              clinical text nlp,
+              clinical text annotation,
+              clinical text mining,
+              clinical text algorithms,
+              clinical text meaning,
+              clinical documentation nlp,
+              clinical documentation semantics,
+              clinical report nlp,
+              clinical note annotation,
+              clinical note processing,
+              clinical note management,
+              clinical informatics,
+              clinical data management,
+              clinical information extraction,
+              clinical free text,
+              clinical deep learning,
+              understand clinical language,
+              understanding clinical facts,
+              medical natural language processing software,
+              medical natural language processing tool,
+              medical natural language processing,
+              medical nlp tool,
+              medical nlp software,
+              medical nlp,
+              medical annotation,
+              medical text nlp,
+              medical text annotation,
+              medical text mining,
+              medical text algorithms,
+              medical text meaning,
+              medical documentation nlp,
+              medical documentation semantics,
+              medical report nlp,
+              medical note annotation,
+              medical note processing,
+              medical note management,
+              medical informatics,
+              medical data management,
+              medical information extraction,
+              medical free text,
+              medical deep learning,
+              medical healthcare language,
+              medical healthcare facts,
+              healthcare note nlp,
+              health note nlp,
+              medical note nlp,
+              biomedical note nlp,
+              patient note nlp,
+              research note nlp,
+              electronic medical record note nlp,
+              EMR note nlp,
+              electronic health record note nlp,
+              EHR note nlp,
+              text annotation,
+              pathology report nlp,
+              radiodiagnostics language processing,
+              clinical research nlp,">
+        <meta name="author" content="CLAMP Development Team.">
+
+        <meta name="robots" content="index, follow">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        
+        <meta property="og:title" content="CLAMP | Natural Language Processing (NLP) Software">
+
+        <link rel="shortcut icon" href="./img/clamp_icon/16.png">
+		<link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/owl.css">
+        <link rel="stylesheet" href="css/jquery.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/styles-2016-11-22.css">
+        <link rel="stylesheet" href="css/manual.css">
+        <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/manual.js"></script>
+        <!-- added for the manual-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.bundle.min.js"></script> -->
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-76452433-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <!-- Google Feeds-->
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            
+        
+  	          
+    
+</head>
+
+<body>
+
+        <header id="home" class="header">
+            <div id="main-nav" class="navbar bs-docs-nav fixed bg_menu" role="banner">
+                <div class="container">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <img class="logo" src="img/logo.png" width="50" alt="CLAMP Logo">
+                        </div>
+                        <div class="pull-left">
+                            <h3 class="logo hidden-xs">CLAMP</h3>
+                            <h2 class="logo visible-xs">CLAMP</h2>
+                            <p class="logo hidden-xs">Clinical Language Annotation, Modeling, and Processing Toolkit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-header responsive-logo visible-xs">
+                    <button aria-expanded="true" class="navbar-toggle" type="button" data-toggle="collapse"
+                            data-target="#bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="bg_menu_se">
+                    <div class="container">
+                        <nav class="navbar-collapse collapse" role="navigation" id="bs-navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">
+                                <li class="active navitem"><a href="index.html">Home</a></li>
+                                <li class="navitem"><a href="users.html">Users</a></li>
+                                <li class="navitem"><a href="publications.html">Publications</a></li>
+                                <li class="navitem"><a href="clampdemo.html">Live Demo</a></li>
+                                <li class="navitem"><a href="get-clamp.html">Download</a></li>
+                                <!--<li class="dropdown"> -->
+                                    <a href="#" class="navitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdownMenu-download">Download <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-download">
+                                        <li><a class=submenu href="get-clamp.html"> CLAMP</a></li>
+                                        <li><a class=submenu href="cancer.html"> CLAMP-Cancer</a></li>
+                                    </ul>
+                                </li>-->
+
+                                <li class="dropdown">
+                                    <a href="#" class="navitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdownMenu-doc">Resources<span class="caret"></span></a>
+                                    <!-- <a class="btn btn-secondary dropdown-toggle" h<ref="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></a> -->
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-doc">
+                                    <!-- <ul class="dropdown-menu" > -->
+                                    	<li><a class=submenu href="new-feature.html">New Features</a></li>
+                                        <li><a class=submenu href="tutorial.html">Tutorial</a></li>
+                                        <li><a class=submenu href="faq.html">FAQ</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="documentation.html">Manual - Download</a></li>
+                                        <li><a href="manual.html">Manual - Online</a></li>
+                                        <li><a href="pipeline-library.html">Pipepline Library</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="navitem"><a href="support.html">Support</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<div class="container">
+    <div class="page-header">
+        <h1 class="text-center">COVID-19 TestNorm</h1>
+        <h3 class="text-center">Normalize COVID-19 Testing Names to LOINC Codes</h3>
+    </div>
+</div>
+
+<div class="container">
+    <h4 class="text-left" style="padding: 1em 0 1em 0;">Publication</h4>
+    <div class="list-group">
+        <span class="list-group-item" style="padding-bottom: 25px"> <span class="glyphicon glyphicon-file"></span>
+            Dong, X., Li, J., Soysal, E., Bian, J., DuVall, S., Hanchrow, E., Liu, H., Lynch, K., Matheny, M.,
+            Natarajan, K., Ohno-Machado, L., Pakhomov, S., Reeves, R., Sitapati, A., Abhyankar, S., Cullen, T.,
+            Deckard, J., Jiang, X., Murphy, R., & Xu, H. (2020).
+            COVID-19 TestNorm - A tool to normalize COVID-19 testing names to LOINC codes,
+             Journal of the American Medical Informatics Association.
+            <a href="https://doi.org/10.1093/jamia/ocaa145" target="_blank"  style="text-decoration: underline;float: right">Full text link</a>
+        </span>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <h4 class="text-left" style="padding: 1em 0 1em 0;">Introduction</h4>
+    <p style="padding: 0 0 1em 0;">
+        To efficiently conduct clinical studies across different institutions within a network, one 
+        requirement is to normalize clinical data to common data models (CDM) and standard 
+        terminologies. Among different types of clinical data, COVID-19 diagnostic testings are 
+        extremely important for all the following analyses, as they are the primary means to identify the 
+        confirmed COVID-19 cases. To address the urgency of the pandemic, individual institutions have
+        created local names and local codes for those new COVID-19 testings in their EHRs. 
+        Meanwhile, LOINC (The standard code system for laboratory observations), a widely used 
+        international standard for lab tests, has responded quickly by developing a new set of standard 
+        codes for COVID-19 testings, to guide standard coding of COVID-19 testings in clinical 
+        settings. Nevertheless, there is a lack of mappings between local COVID-19 testing names and 
+        standard LOINC codes, which hampers cross-institutional studies that rely on normalized clinical
+        data at each institution. 
+    </p>
+    <p style="padding: 0 0 1em 0;">
+        Therefore, we developed an automated tool - COVID-19 TestNorm, to normalize a local 
+        COVID-19 testing name to a standard LOINC code. We believe COVID-19 TestNorm will be a 
+        useful tool for secondary use of EHRs for the pandemic, thus facilitating the global research of 
+        COVID-19. <strong>This tool is available to the community via an open source package at GitHub 
+        (<a href="https://github.com/UTHealth-CCB/covid19_testnorm">Link</a>).</strong>
+    </p>
+</div>
+
+<hr>
+
+<div class="container">
+    <h4 class="text-left" style="padding: 1em 0 1em 0;">COVID-19 TestNorm Demo</h4>
+    <p  style="padding: 0 0 1em 0;"> 
+        We are following the <a href="https://loinc.org/sars-coronavirus-2/">LOINC guidelines</a>
+        for normalizing COVID-19 testing names to LOINC codes. Please enter a COVID-19 testing name 
+        below. If you have additional information about the testing such as specimen and manufacturer 
+        information, please concatenate them to the end of the testing name. 
+    </p>
+    <p> 
+        Example testing names are:
+        <ul style="padding: 0 0 1em 0;">
+            <li style="padding: 0 0 0 2em;"> &#x25AA; COVID-19 IGM (RAPID)</li>
+            <li style="padding: 0 0 0 2em;"> &#x25AA; COVID-19 IGG (RAPID)</li>
+            <li style="padding: 0 0 0 2em;"> &#x25AA; SARS-COV-2 RT-PCR</li>
+            <li style="padding: 0 0 0 2em;"> &#x25AA; SARS COV 2 RNA, RT PCR</li>
+            <li style="padding: 0 0 0 2em;"> &#x25AA; NOVEL CORONAVIRUS 2019 rRT PCR, NASOPHAR</li>
+        </ul>
+    </p>
+    <form id="query_form">
+        <table style="width:100%">
+            <tr style="text-align:left">
+                <td style="width:25%;"><h4 style="text-align:left"> COVID-19 Testing Name </h4></td>
+                <td style="width:5%;"><h4 style="text-align:left"> : </h4></td>
+                <td style="width:70%">
+                    <input style="height:40px; width:50%; font-size: 16px;" id="input" type="text" name="covid19_testing_names"/>
+                    <button style="height:40px; vertical-align: top;" type="submit" value="Mapping">Mapping</button>
+                </td>
+            </tr>
+        </table>
+        <div style="padding: 2em 0 0 0" id="mapping_output">
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+        $('#query_form').submit(function(e) {
+                e.preventDefault();
+                var data = {};
+                var Form = this;
+                $.each(this.elements, function(i, v) {
+                    var input = $(v);
+                    data[input.attr("name")] = input.val();
+                    delete data["undefined"];
+                });
+                $.ajax({
+                    type: 'POST',
+                    //url: 'http://ec2-107-23-211-153.compute-1.amazonaws.com:5000/mapping',
+                    url: 'covid/testnorm_call.php',
+                    dataType: 'json',
+                    contentType: 'application/json; charset=utf-8',
+                    data: JSON.stringify(data),
+                    context: Form,
+                    success: function(callback) {
+                        console.log(callback);
+                        if (!$.trim(callback.loinc_codes)) {
+                            if (!$.trim(data["covid19_testing_names"])) {
+                                $('#mapping_output').html('<h4 class="text-left">No appropriate LOINC codes found, please try a valid COVID19 test name.</h4>');
+                            }
+                            else {
+                                $('#mapping_output').html('<h4 class="text-left">No appropriate LOINC codes found.</h4>');
+                            }                            
+                        }
+                        else {
+                            var loinc_codes = callback.loinc_codes.split(";");
+                            var loinc_codes_html = '<table style="width:100%">';
+                            for (i = 0; i < loinc_codes.length; i++) {
+                                var loinc_code = loinc_codes[i].split(',');
+                                var code = loinc_code[0].substring(loinc_code[0].indexOf(":")+2);
+                                var name = loinc_code[1].substring(loinc_code[1].indexOf(":")+2);
+                                loinc_codes_html += '<tr style="text-align:left;vertical-align: top"><td style="width:25%"><h4 style="padding: 0 0 0.6em 0;text-align:left;vertical-align: top">LOINC Code</h4></td>'
+                                                 +  '<td style="width:5%"><h4 style="padding: 0 0 0.6em 0;text-align:left;vertical-align: top">:</h4></td>'
+                                                 +  '<td style="width:70%"><h4 style="padding: 0 0 0.6em 0;text-align:left;vertical-align: top"><a href="https://loinc.org/'
+                                                 +  code + '/"> ' + code + '</a></h4></td><tr>'
+                                                 +  '<tr style="text-align:left;vertical-align: top"><td style="width:25%"><h4 style="padding: 0 0 1.2em 0;text-align:left;vertical-align: top">Long Common Name</h4></td>'
+                                                 +  '<td style="width:5%"><h4 style="padding: 0 0 1.2em 0;text-align:left;vertical-align: top">:</h4></td>'
+                                                 +  '<td style="width:70%"><h4 style="padding: 0 0 1.2em 0;text-align:left;vertical-align: top"><a href="https://loinc.org/'
+                                                 +  code + '/"> ' + name + '</a></h4></td><tr>';
+                            }
+                            loinc_codes_html += '</table>';
+                            $('#mapping_output').html(loinc_codes_html);
+                        }
+                    },
+                    error: function() {
+                        $('#mapping_output').html('<h4 class="text-left">There was an error. Please try again later.</h4>');
+                    }
+                });
+            });
+</script>
+
+
+<hr>
+
+<div class="container">
+    <h4 class="text-left" style="padding: 1em 0 1em 0;">Methods</h4>
+    <p style="padding: 0 0 1em 0;">
+        Using COVID-19 testing data collected from eight institutions, we developed a rule-based 
+        system to automatically normalize a local testing name to a LOINC code of COVID-19. Figure 1
+        shows an overview of the modules of the COVID-19 TestNorm system, mainly including entity 
+        recognition and LOINC mapping, with inputs from knowledge components such as lexicons and 
+        coding rules. The input lab testing names are tokenized at first, then specific entities are 
+        recognized and appropriate LOINC codes are automatically mapped and returned finally.
+    </p>
+    <div class="description">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <img height="516" src="./img/covid/loinc_overview.png" alt="Overview"/>
+                        <p>System overview</p>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center">
+                        <img height="516" src="./img/covid/dec_tree.png" alt="Decision Tree Diagram" />
+                        <p>Decision tree for coding rules</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+</div>
+
+<hr>
+
+<div class="container" align="center">
+    <a href="https://github.com/UTHealth-CCB/covid19_testnorm">
+        <img border="0" width="200" src="./img/github_logo.jpg" alt="Github Logo">
+    </a>
+    <h5 style="padding: 0 0 1em 0;"><a href="https://github.com/UTHealth-CCB/covid19_testnorm">Github repository</a></h5>
+</div>
+
+<hr>
+
+<div class="container">
+    <h4 class="text-left" style="padding: 1em 0 1em 0;">Acknowledgements</h4>
+    <p style="padding: 0 0 2em 0;">
+        We would like to thank the following institutions for providing local COVID-19 testing names: 
+        UT Physicians Health Care System, Memorial Hermann Health System, University of California San Diego, 
+        Mayo Clinic, University of Florida, University of Minnesota, Columbia University Medical Center and 
+        the Tennessee Valley Healthcare System of Veterans Affairs Medical Center.</p>
+    
+</div>
+
+<section class="feature-box contact-box">
+    <div class="container">        
+        <h2>Contact Us</h2>        
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <p><strong>Center for Computational Biomedicine</strong></p>
+                <p>
+                    <span class="glyphicon glyphicon-map-marker"></span>                    
+                    <span>School of Biomedical Informatics</span>
+                </p>
+                <p>The University of Texas Health Science Center at Houston</p>
+                <p>7000 Fannin St, Houston, TX 77030</p>
+            </div>
+			
+			
+			<!--
+            <div class="col-lg-4">
+                <p><strong>Research Coordinator</strong></p>
+                <p>Anupama E. Gururaj, PhD</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:Anupama.E.Gururaj@uth.tmc.edu">anupama.e.gururaj@uth.tmc.edu</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-500-3619</span>
+                </p>
+            </div>
+            -->
+            <div class="col-lg-4">
+                <p><strong>License Support</strong></p>
+                <p>Hao Ding - Director of Operations</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:hao.ding@melaxtech.com">hao.ding@melaxtech.com</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-208-8195</span>
+                </p>
+                <p>Jianfu Li - Research Scientist</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:jianfu.li@uth.tmc.edu">jianfu.li@uth.tmc.edu</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-500-3934</span>
+                </p>
+            </div>
+
+            <!--div class="col-lg-4">
+                <p><strong>Technical Support</strong></p>
+                <p>Jingqi Wang, MS - Scientific Programmer</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:jingqi.wang@uth.tmc.edu">jingqi.wang@uth.tmc.edu</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-500-3620</span>
+                </p>
+            </div-->
+            
+            <div class="col-lg-4">
+                <p><strong>Technical Support</strong></p>
+                <p>Huy Anh Pham - NLP Engineer</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:support@melaxtech.com">support@melaxtech.com</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-208-8195</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 50px">
+            <div class="text-center">
+            <h4>Follow Us</h4><br>
+            <a target="_blank" title="follow me on twitter" href="https://twitter.com/clampnlp"><img alt="follow me on twitter" src="./img/twitter-512.png" height="45px" border=0></a>
+            <a target="_blank" title="find us on Facebook" href="https://www.facebook.com/clamp.toolkit"><img alt="follow me on facebook" src="./img/facebook-512.png" height="60px" border=0></a>
+            <a target="_blank" title="find us on LinkedIn" href=" https://www.linkedin.com/in/clamp-toolkit-4b90a4137/"><img alt="follow me on LinkedIn" src="./img/linkedin-512.png" height="50px" border=0></a>
+</div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="hidden-xs hidden-sm">
+                    <img src="img/SBMI-logo.png" alt="UTHealth Logo" />
+                </div>
+                <div class="visible-xs visible-sm text-center" style="margin-bottom: 20px;">
+                    <img src="img/SBMI-logo.png" alt="UTHealth Logo" />
+                </div>                
+            </div>
+            <div class="col-md-10">
+                <div class="footer-text-lg hidden-xs hidden-sm">                
+                    <p class="text-right">&copy; 2008 - 2024</p>
+                    <p class="text-right">The University of Texas Health Science Center at Houston (UTHealth)</p>
+                </div>
+                <div class="footer-text-xs visible-xs visible-sm">                
+                    <p class="text-center">&copy; 2008 - 2024</p>
+                    <p class="text-center">The University of Texas Health Science Center at Houston</p>
+                    <h3 class="text-center">(UTHealth)</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/vegas.js"></script>
+<script src="js/jquery.knob.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/additional-methods.js"></script>
+<script src="js/scripts-2016-6-29.js"></script>  
+  
+</body>
+</html>

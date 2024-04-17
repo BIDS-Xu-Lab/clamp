@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>     
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CLAMP | Natural Language Processing (NLP) Software</title>
+        <meta name="description" content="CLAMP, Clinical Natural Language Processing Software For Medical and Healthcare Annotation. Text mining and machine learning for clinical notes. NLP system with advanced machine learning tools. ">
+        <meta name="keywords" content="clinical natural language processing software,
+              clinical natural language processing tool,
+              clinical natural language processing,
+              clinical nlp tool,
+              clinical nlp software,
+              clinical nlp,
+              clinical annotation,
+              clinical text nlp,
+              clinical text annotation,
+              clinical text mining,
+              clinical text algorithms,
+              clinical text meaning,
+              clinical documentation nlp,
+              clinical documentation semantics,
+              clinical report nlp,
+              clinical note annotation,
+              clinical note processing,
+              clinical note management,
+              clinical informatics,
+              clinical data management,
+              clinical information extraction,
+              clinical free text,
+              clinical deep learning,
+              understand clinical language,
+              understanding clinical facts,
+              medical natural language processing software,
+              medical natural language processing tool,
+              medical natural language processing,
+              medical nlp tool,
+              medical nlp software,
+              medical nlp,
+              medical annotation,
+              medical text nlp,
+              medical text annotation,
+              medical text mining,
+              medical text algorithms,
+              medical text meaning,
+              medical documentation nlp,
+              medical documentation semantics,
+              medical report nlp,
+              medical note annotation,
+              medical note processing,
+              medical note management,
+              medical informatics,
+              medical data management,
+              medical information extraction,
+              medical free text,
+              medical deep learning,
+              medical healthcare language,
+              medical healthcare facts,
+              healthcare note nlp,
+              health note nlp,
+              medical note nlp,
+              biomedical note nlp,
+              patient note nlp,
+              research note nlp,
+              electronic medical record note nlp,
+              EMR note nlp,
+              electronic health record note nlp,
+              EHR note nlp,
+              text annotation,
+              pathology report nlp,
+              radiodiagnostics language processing,
+              clinical research nlp,">
+        <meta name="author" content="CLAMP Development Team.">
+
+        <meta name="robots" content="index, follow">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        
+        <meta property="og:title" content="CLAMP | Natural Language Processing (NLP) Software">
+
+        <link rel="shortcut icon" href="./img/clamp_icon/16.png">
+		<link rel="stylesheet" href="css/admin.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/owl.css">
+        <link rel="stylesheet" href="css/jquery.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/styles-2016-11-22.css">
+        <link rel="stylesheet" href="css/manual.css">
+        <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/manual.js"></script>
+        <!-- added for the manual-->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.bundle.min.js"></script> -->
+        <!-- Google Analytics -->
+        <script type="text/javascript">
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments);
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-76452433-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+        <!-- Google Feeds-->
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            
+        
+  	          
+    
+</head>
+
+<body>
+
+        <header id="home" class="header">
+            <div id="main-nav" class="navbar bs-docs-nav fixed bg_menu" role="banner">
+                <div class="container">
+                    <div class="clearfix">
+                        <div class="pull-left">
+                            <img class="logo" src="img/logo.png" width="50" alt="CLAMP Logo">
+                        </div>
+                        <div class="pull-left">
+                            <h3 class="logo hidden-xs">CLAMP</h3>
+                            <h2 class="logo visible-xs">CLAMP</h2>
+                            <p class="logo hidden-xs">Clinical Language Annotation, Modeling, and Processing Toolkit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-header responsive-logo visible-xs">
+                    <button aria-expanded="true" class="navbar-toggle" type="button" data-toggle="collapse"
+                            data-target="#bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="bg_menu_se">
+                    <div class="container">
+                        <nav class="navbar-collapse collapse" role="navigation" id="bs-navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right responsive-nav main-nav-list">
+                                <li class="active navitem"><a href="index.html">Home</a></li>
+                                <li class="navitem"><a href="users.html">Users</a></li>
+                                <li class="navitem"><a href="publications.html">Publications</a></li>
+                                <li class="navitem"><a href="clampdemo.html">Live Demo</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="navitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdownMenu-download">Download <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-download">
+                                        <li><a class=submenu href="get-clamp.html"> CLAMP</a></li>
+                                        <li><a class=submenu href="cancer.html"> CLAMP-Cancer</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="#" class="navitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdownMenu-doc">Resources<span class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu-doc">
+                                      <li><a class=submenu href="new-feature.html">New Features</a></li>
+                                        <li><a class=submenu href="tutorial.html">Tutorial</a></li>
+                                        <li><a class=submenu href="faq.html">FAQ</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="documentation.html">Manual - Download</a></li>
+                                        <li><a href="manual.html">Manual - Online</a></li>
+                                        <li><a href="pipeline-library.html">Pipepline Library</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="navitem"><a href="support.html">Support</a></li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<div class="row">
+    <!-- Carousel -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- <ol class="carousel-indicators">
+             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+         </ol> -->
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!-- Static Header -->
+                <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center" style="padding: 2.5em 0 2.5em 0;">
+                        <span class="ad">New COVID-19 Pipeline available <a target="_blank" href="covid/nlp.html">here</a>!</span>
+                        <br>
+                    </div> 
+                </div><!-- /header-text -->
+            </div>
+
+            <div class="item">
+                 <!-- Static Header -->
+                 <div class="header-text hidden-xs">
+                    <div class="col-md-12 text-center" style="padding: 2.5em 0 2.5em 0;">
+                        <span class="ad">Normalize COVID-19 Testing Names to LOINC Codes using <a target="_blank" href="covid/loinc.html">COVID-19 TestNorm</a>!</span>
+                        <br>
+                    </div> 
+                </div><!-- /header-text -->
+            </div>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div><!-- /carousel -->
+</div>
+
+<section id="Home-Intro" class="feature-box" style="padding-bottom: 0px">
+
+
+    <div class="container" style="margin-top: 50px;margin-bottom: 100px">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-header">
+                    <h2>CLAMP</h2>
+                    <h4>Clinical Language Annotation, Modeling, and Processing Toolkit</h4>
+                </div>
+            <p class="text-center">
+                CLAMP is a comprehensive clinical Natural Language Processing (NLP) software 
+                that enables recognition and automatic encoding of clinical information in narrative patient reports.
+            </p>
+                </div>
+
+            <div class="col-md-5 col-md-offset-1" >
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/iHweIo65hKY?ecver=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+
+    <hr>
+    
+    <div class="container">
+        <div class="description">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <img width="150" src="./img/pipeline1.jpg" alt="Pipeline Image 1"/>
+                    </div>
+                    <h4>High Performance</h4>
+                    <p>CLAMP components are built on proven methods in many clinical NLP challenges.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <img width="150" src="./img/pipeline2.jpg" alt="Pipeline Image 2" />
+                    </div>
+                    <h4>Customizable</h4>
+                    <p>Choose From Various Choices of NLP and Machine Learning Components.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <img width="150" src="./img/pipeline3.jpg" alt="Pipeline Image 3" />
+                    </div>
+                    <h4>Enterprise Features</h4>
+                    <p>Annotate Target Documents, Generate Models, and Process Clinical Notes.</p>
+                </div>
+            </div>            
+        </div>
+    </div>
+</section>
+
+<section class="feature-box dark-bg">        
+    <div class="container">
+        <div class="highlight-box">
+            <h2>High-performance NLP components</h2>
+            <div class="clearfix">
+                <img src="./img/feature1.jpg" alt="" class="pull-left" alt="Feature Image 1" />
+                <p class="pull-left">
+                    CLAMP components are built on proven methods in many clinical NLP challenges including 
+                    the I2B2 clinical NER (2009/2010-#2), SHARE/CLEF (2013-#1), SemEval2014 UMLS encoding (#1).
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="feature-box light-bg">        
+    <div class="container">
+
+        <div class="highlight-box">
+            <h2>Machine learning and hybrid approaches</h2>
+            <div class="clearfix">                
+                <p class="pull-left">
+                    Depending on the task, users can train their own model for the machine learning 
+                    based components of CLAMP and evaluate custom models using a custom corpus.
+                </p>
+                <img src="./img/feature2.jpg" alt="" class="pull-left" alt="Feature Image 2" />
+            </div>                    
+        </div>
+
+    </div>
+</section>
+<section class="feature-box dark-bg">        
+    <div class="container">
+
+        <div class="highlight-box">
+            <h2>Annotation and corpora management</h2>
+            <div class="clearfix">
+                <img src="./img/feature3.jpg" alt="" class="pull-left" alt="Feature Image 3" />
+                <p class="pull-left">
+                    Users can import clinical text corpora into the CLAMP workspace and annotate files 
+                    using the built-in annotation tool that can be utilized in CLAMP projects, both as training and test datasets.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="feature-box light-bg">        
+    <div class="container">
+
+        <div class="highlight-box">
+            <h2>Customized pipelines</h2>
+            <div class="clearfix">
+                <p class="pull-left">
+                    CLAMP allows building the NLP pipelines by offering all the requisite components 
+                    such as named entity recognition, assertion, UMLS encoder, and component customizations.
+                </p>
+                <img src="./img/feature4.jpg" alt="" class="pull-left" alt="Feature Image 4" />
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="feature-box dark-bg">        
+    <div class="container">
+
+        <div class="highlight-box">
+            <h2>Knowledge sources and sample clinical text</h2>
+            <div class="clearfix">
+                <img src="./img/feature5.jpg" alt="" class="pull-left" alt="Feature Image 5" />
+                <p class="pull-left">
+                    All the knowledge resources required for CLAMP components like dictionaries, section header list, 
+                    or medical abbreviation list are provided along with it.
+                </p>
+            </div>                    
+        </div>
+
+    </div>
+</section>
+<section class="feature-box light-bg">        
+    <div class="container">
+
+        <div class="highlight-box">
+            <h2>Interoperability and Scalability</h2>
+            <div class="clearfix">                
+                <p class="pull-left">
+                    CLAMP is built on the UIMA framework, and is therefore compatible with other systems such as 
+                    cTAKES. Further, CLAMP also utilizes the cTAKES’ type system for lower linguistic level annotations.
+                </p>
+                <img src="./img/feature6.jpg" alt="" class="pull-left" alt="Feature Image 6" />
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="feature-box dark-bg">
+    <div class="container">
+        <h2>About Us</h2>
+        <p>
+            The CLAMP is a natural language processing (NLP) tool, based on several award-winning methods and applications developed in University of Texas Health Science Center at Houston, School of Biomedical Informatics.
+        </p>
+    </div>
+</section>
+
+
+
+<div id="fb-root"></div>
+
+
+
+<section class="feature-box">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                <div class="box">
+                    <div class="box-icon">
+                        <span class="fa fa-4x fa-twitter"></span>
+                    </div>
+                    <div class="info">
+                        <h4 class="text-center">Follow Us On Twitter</h4>
+                        <a class="twitter-timeline" data-width="400" data-height="500" data-theme="light" href="https://twitter.com/clampnlp">Tweets by clampnlp</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-lg-offset-1">
+                        <div class="box">
+                            <div class="box-icon">
+                                <span class="fa fa-4x fa-facebook"></span>
+                            </div>
+                            <div class="info">
+                                <h4 class="text-center">Find Us On Facebook</h4>
+                                <div class="fb-page" data-href="https://www.facebook.com/CLAMP-Toolkit-1894815827420926/" data-tabs="timeline" data-width="400" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/CLAMP-Toolkit-1894815827420926/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/CLAMP-Toolkit-1894815827420926/">CLAMP Toolkit</a></blockquote></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="col-md-6" >
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+</section>
+
+
+
+<section class="feature-box contact-box">
+    <div class="container">        
+        <h2>Contact Us</h2>        
+        
+        <div class="row">
+            <div class="col-lg-4">
+                <p><strong>Center for Computational Biomedicine</strong></p>
+                <p>
+                    <span class="glyphicon glyphicon-map-marker"></span>                    
+                    <span>School of Biomedical Informatics</span>
+                </p>
+                <p>The University of Texas Health Science Center at Houston</p>
+                <p>7000 Fannin St, Houston, TX 77030</p>
+            </div>
+			
+			
+			<!--
+            <div class="col-lg-4">
+                <p><strong>Research Coordinator</strong></p>
+                <p>Anupama E. Gururaj, PhD</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:Anupama.E.Gururaj@uth.tmc.edu">anupama.e.gururaj@uth.tmc.edu</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-500-3619</span>
+                </p>
+            </div>
+            -->
+            <div class="col-lg-4">
+                <p><strong>License Support</strong></p>
+                <p>Hao Ding - Director of Operations</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:hao.ding@melaxtech.com">hao.ding@melaxtech.com</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-208-8195</span>
+                </p>
+                <p>Jianfu Li - Research Scientist</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:jianfu.li@uth.tmc.edu">jianfu.li@uth.tmc.edu</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-500-3934</span>
+                </p>
+            </div>
+
+            <!--div class="col-lg-4">
+                <p><strong>Technical Support</strong></p>
+                <p>Jingqi Wang, MS - Scientific Programmer</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:jingqi.wang@uth.tmc.edu">jingqi.wang@uth.tmc.edu</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-500-3620</span>
+                </p>
+            </div-->
+            
+            <div class="col-lg-4">
+                <p><strong>Technical Support</strong></p>
+                <p>Huy Anh Pham - NLP Engineer</p>
+                <p>
+                    <span class="glyphicon glyphicon-envelope"></span>
+                    <a href="mailto:support@melaxtech.com">support@melaxtech.com</a>
+                </p>
+                <p>
+                    <span class="glyphicon glyphicon-earphone"></span>
+                    <span>713-208-8195</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 50px">
+            <div class="text-center">
+            <h4>Follow Us</h4><br>
+            <a target="_blank" title="follow me on twitter" href="https://twitter.com/clampnlp"><img alt="follow me on twitter" src="./img/twitter-512.png" height="45px" border=0></a>
+            <a target="_blank" title="find us on Facebook" href="https://www.facebook.com/clamp.toolkit"><img alt="follow me on facebook" src="./img/facebook-512.png" height="60px" border=0></a>
+            <a target="_blank" title="find us on LinkedIn" href=" https://www.linkedin.com/in/clamp-toolkit-4b90a4137/"><img alt="follow me on LinkedIn" src="./img/linkedin-512.png" height="50px" border=0></a>
+</div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="hidden-xs hidden-sm">
+                    <img src="img/SBMI-logo.png" alt="UTHealth Logo" />
+                </div>
+                <div class="visible-xs visible-sm text-center" style="margin-bottom: 20px;">
+                    <img src="img/SBMI-logo.png" alt="UTHealth Logo" />
+                </div>                
+            </div>
+            <div class="col-md-10">
+                <div class="footer-text-lg hidden-xs hidden-sm">                
+                    <p class="text-right">&copy; 2008 - 2024</p>
+                    <p class="text-right">The University of Texas Health Science Center at Houston (UTHealth)</p>
+                </div>
+                <div class="footer-text-xs visible-xs visible-sm">                
+                    <p class="text-center">&copy; 2008 - 2024</p>
+                    <p class="text-center">The University of Texas Health Science Center at Houston</p>
+                    <h3 class="text-center">(UTHealth)</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/vegas.js"></script>
+<script src="js/jquery.knob.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/additional-methods.js"></script>
+<script src="js/scripts-2016-6-29.js"></script>  
+  
+</body>
+</html>
